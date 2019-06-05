@@ -1,0 +1,26 @@
+{
+  "name": "express-brute-firestore",
+  "version": "0.1.0",
+  "description": "Firestore Store for express-brute",
+  "main": "index.js",
+  "repository": "https://github.com/flasd/express-brute-firestore.git",
+  "author": "Marcel Coelho",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "coverage": "cross-env NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls",
+    "lint": "eslint src/** ",
+    "prepublishOnly": "npm run test && npm run coverage && npm run lint",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+  "dependencies": {
+    "express-brute": "^1.0.1",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "jest": "^24.8.0"
+  }
+}
